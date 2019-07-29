@@ -1,0 +1,13 @@
+fn main() {
+    let mut line = String::new();
+
+
+    println!("Enter your email id :");
+    let b1 = std::io::stdin().read_line(&mut line).unwrap();
+    let mut c=line.len();
+   if line.contains('@') && (line.contains(".com") || line.contains(".co.in"))
+   {
+       println!("vaild")
+   }
+    else { println!("invalid") }
+}
