@@ -4,6 +4,6 @@ url="https://www.google.com/search?q=linux&rlz=1C1CHBF_enIN856IN856&oq=linux&aqs
 response =requests.get(url)
 data=response.text
 soup=BeautifulSoup(data,"html.parser")
-tags=soup.findall('a')
+tags=soup.find_all('a')
 for tag in tags:
     print(tag.get("href"))
