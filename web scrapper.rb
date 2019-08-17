@@ -1,14 +1,4 @@
-in python
-from bs4 import BeautifulSoup
-import requests
-url="https://www.google.com/search?q=linux&rlz=1C1CHBF_enIN856IN856&oq=linux&aqs=chrome..69i57j0l5.2856j0j7&sourceid=chrome&ie=UTF-8"
-response =requests.get(url)
-data=response.text
-soup=BeautifulSoup(data,"html.parser")
-tags=soup.find_all('a')
-for tag in tags:
-    print(tag.get("href"))
-or in ruby
+
 require "HTTParty"
 require "Nokogiri"
 require "byebug"
