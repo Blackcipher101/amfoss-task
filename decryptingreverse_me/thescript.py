@@ -1,22 +1,34 @@
 import string
 st=input()
 tounhex =[]
+
+
+#------------------------------------dehexing------------------------------------------
 for i in range (0,len(st),2):
     tounhex.append(st[i]+st[i+1])
 uhex=[]
 for i in range (len(tounhex)):
     new=bytearray.fromhex(tounhex[i]).decode()
     uhex.append(new)
-print(uhex)
+
 strin=""
 for ele in range (len(uhex)):
     strin+=(str(uhex[ele]))
-print(strin)
 retapo= []
+
+
+
+
+
+#===============================undoingtheoperatin(XOR)==============================================================
 for op in range(len(strin)):
         neardone = chr(ord(strin[op])^10)
         retapo.append(neardone)
-print(retapo)        
+        
+        
+        
+        
+#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,shifting,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,        
 upper = string.ascii_uppercase
 lower = string.ascii_lowercase
 digits = string.digits
