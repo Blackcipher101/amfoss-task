@@ -16,5 +16,5 @@ fn main() {
         }
     else{
         
-        println!("invali:)
+        println!("invalid")
         }
