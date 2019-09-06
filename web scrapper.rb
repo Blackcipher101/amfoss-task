@@ -1,13 +1,10 @@
+require 'rubygems'
+require 'nokogiri'
+require 'open-uri'
 
-require "HTTParty"
-require "Nokogiri"
-require "byebug"
+doc = Nokogiri::HTML(open('https://www.google.com/search?num=11&q=linux'))
 
-def scrapper
-  doc=HTTParty.get("https://www.google.com/search?q=linux")
-  parsepage ||=Nokogiri::HTML(doc)
-  byebug
-
-end
-@byebug
-scrapper
+doc.xpath('//a/div[@class="BNeawe vvjwJb AP7Wnd"]').each do |results|
+    puts ""
+    puts results.text
+end    
