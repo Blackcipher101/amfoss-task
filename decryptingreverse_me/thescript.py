@@ -20,7 +20,7 @@ retapo= []
 
 
 
-#===============================undoingtheoperatin(XOR)==============================================================
+#===============================undoingtheoperation(XOR)==============================================================
 for op in range(len(strin)):
         neardone = chr(ord(strin[op])^10)
         retapo.append(neardone)
