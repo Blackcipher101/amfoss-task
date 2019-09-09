@@ -1,73 +1,36 @@
 package main
 
 import (
-	"encoding/json"
-	"fmt"
-	"log"
-	"net/http"
-	"net/url"
+    "github.com/dghubble/go-twitter/twitter"
+    "github.com/dghubble/oauth1"
+    "os"
+    "flag"
+    "fmt"
+	
 )
 
-type Numverify struct {
-	Valid               bool   `json:"valid"`
-	Number              string `json:"number"`
-	LocalFormat         string `json:"local_format"`
-	InternationalFormat string `json:"international_format"`
-	CountryPrefix       string `json:"country_prefix"`
-	CountryCode         string `json:"country_code"`
-	CountryName         string `json:"country_name"`
-	Location            string `json:"location"`
-	Carrier             string `json:"carrier"`
-	LineType            string `json:"line_type"`
-}
-
 func main() {
-	phone := "919860180616"
-	// QueryEscape escapes the phone string so
-	// it can be safely placed inside a URL query
-	safePhone := url.QueryEscape(phone)
-
-	url := fmt.Sprintf("http://apilayer.net/api/validate?access_key=2f49439b10fdfde791fc8654c12aef36&number=%s", safePhone)
-
-	// Build the request
-	req, err := http.NewRequest("GET", url, nil)
-	if err != nil {
-		log.Fatal("NewRequest: ", err)
-		return
+	var User string    
+	fmt.Println("Enter the name of the user?")
+	fmt.Scanln(&User)
+	tn:=flag.String("twitter",User,"it contains the name of twitter") 
+	flag.Parse()
+	config := oauth1.NewConfig("n7jHG93q92JTF37gfb9r5mVxC", "CwrGulJIVxrKuOlEdLPzQeXktzGhMzYCdmg9eecEsXWQ0LO9Ia")
+	token := oauth1.NewToken("1162736073312620545-6YZ4a04wuBZhC5wFTWnAfEmhGQKZyF", "P7vXQa0KYbPaQpy9lITB55UkRkpOeXCsavwluOUhB3t5r")
+	httpClient := config.Client(oauth1.NoContext, token)
+	client := twitter.NewClient(httpClient)
+	f, err := os.Create("Followers.txt")
+	followers, resp, err := client.Followers.List(&twitter.FollowerListParams{ScreenName: *tn,})
+	var i int = 0;
+	fmt.Println(resp, err)
+	f.WriteString("Followers - " + *tn)
+	for _, follower := range followers.Users {
+		i++
+		f.WriteString("\n" + follower.ScreenName)
 	}
-
-	// For control over HTTP client headers,
-	// redirect policy, and other settings,
-	// create a Client
-	// A Client is an HTTP client
-	client := &http.Client{}
-
-	// Send the request via a client
-	// Do sends an HTTP request and
-	// returns an HTTP response
-	resp, err := client.Do(req)
-	if err != nil {
-		log.Fatal("Do: ", err)
-		return
-	}
-
-	// Callers should close resp.Body
-	// when done reading from it
-	// Defer the closing of the body
-	defer resp.Body.Close()
-
-	// Fill the record with the data from the JSON
-	var record Numverify
-
-	// Use json.Decode for reading streams of JSON data
-	if err := json.NewDecoder(resp.Body).Decode(&record); err != nil {
-		log.Println(err)
-	}
-
-	fmt.Println("Phone No. = ", record.Followers)
-	fmt.Println("Country   = ", record.CountryName)
-	fmt.Println("Location  = ", record.Location)
-	fmt.Println("Carrier   = ", record.Carrier)
-	fmt.Println("LineType  = ", record.LineType)
+	f.WriteString("\n")
+	f.WriteString(fmt.Sprintf("\n", i))
+	f.Close()
 
 }
+
