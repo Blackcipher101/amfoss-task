@@ -13,4 +13,4 @@ elif text[1]=="-":
 elif text[1]=="*":
     print(value*waste)
 elif text[1]=="/":
-    print(value/waste
+    print(value/waste)
