@@ -4,7 +4,7 @@ int hcf(int divisor, int dividend)   //Euclid's division algorithm
 {
 	while (divisor != 0)
 	{
-		unsigned long long remainder = divisor;
+		int remainder = divisor;
 		divisor = dividend % divisor;
 		dividend = remainder;
 	}
