@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-int hcf(int divisor, int dividend)   \\Euclid's division algorithm
+int hcf(int divisor, int dividend)   //Euclid's division algorithm
 {
 	while (divisor != 0)
 	{
@@ -20,7 +20,7 @@ int main()
 	{
 		cin >> x;
 		ans = 1;
-		for (int i = 2; i <= x; i++) \\lcm is associative
+		for (int i = 2; i <= x; i++) //lcm is associative
 			ans =ans*(i/hcf(ans,i));
 		cout << ans<<endl;
 
