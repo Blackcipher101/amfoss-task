@@ -1,3 +1,4 @@
+#include<iostearm.h>
 int main()
 {
 	char a[10];
