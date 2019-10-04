@@ -1,6 +1,8 @@
 <h1>amFoss task</h1>
+
+
 | **Srno**     |**Task**           | **Description**  | **Links** |
-| ------------- |:-------------:| -----:|:---------------:|
+| ------------- |-------------|-----|---------------|
 | 1     | Ubuntu | Install Unbuntu/Dual Boot |https://www.youtube.com/watch?v=u5QyjHIYwTQ|
 | 2     | Programming      |   Complete HackerRank and Codeforces Problem |https://stackabuse.com/pytesseract-simple-python-optical-character-recognition/|
 | 3 |Personal website       |Get up and running a persnoal website |https://jekyllrb.com/|
