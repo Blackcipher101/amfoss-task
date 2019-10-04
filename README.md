@@ -1,63 +1,16 @@
 <h1>amFoss task</h1>
-<h2>Task 0</h2>
-Installed ubuntu
-<p>links</p>
-<ol>
-<li><a href=https://www.youtube.com/watch?v=u5QyjHIYwTQ>youtube</a></li>
-</ol>
-
-<h2>Task 1</h2>
-starred amfoss task using  script
-
-<h2>Task 2</h2>
-Completed Hackerrank Codeforces
-
-<h2>Task Captcha Breaking</h2>
-Takes input as a image(.png,.jpeg) and gives the output of the expression in thee image using pytessract
-<p>links</p>
-<ol>
-<li><a href=https://stackabuse.com/pytesseract-simple-python-optical-character-recognition/>pytessract</a></li>
-</ol>
-
-
-<h2>Task personal website</h2>
-used ruby to build website using jeklly gem and hosted it using github pages
-<p>links</p>
-<ol>
-<li><a href=https://jekyllrb.com/>jeklly</a></li>
-</ol>
-
-<h2>Task ping pong</h2>
-Built on python ,the gameis multiplayer ping pong game built using turtle
-
-<h2>Task Project Euler</h2>
-Using mathematics and algorithms
-
-<h2>Task rusted email</h2>
-Enter email id shows valid or not done using regex
-
-<h2>Task get using javascrpit</h2>
-Gets data from graphql github
-<p>links</p>
-<ol>
-<li><a href=medium.com>meduim</a></li>
-</ol>
-
-<h2>Task web scrapping</h2>
-get data from google using Nokogiri(ruby)
-<p>links</p>
-<ol>
-<li><a href=https://nokogiri.org/tutorials/parsing_an_html_xml_document.html>parsing</a></li>
-<li><a href=https://nokogiri.org/tutorials/searching_a_xml_html_document.html>searching</a></li>
-</ol> 
-
-<h2>cli app with Go</h2>
-get followers in twittwer after entering username
-<p>links</p>
-<ol>
-<li><a href=https://gobyexample.com/command-line-flags>flags</a></li>
-<li><a href=https://golangbot.com/write-files/>read and write</a></li>
-<li><a href=https://godoc.org/github.com/dghubble/go-twitter/twitter>twitter</a></li>
-</ol>
-
-
+| **Srno**     |**Task**           | **Description**  | **Links** |
+| ------------- |:-------------:| -----:|:---------------:|
+| 1     | Ubuntu | Install Unbuntu/Dual Boot |https://www.youtube.com/watch?v=u5QyjHIYwTQ|
+| 2     | Programming      |   Complete HackerRank and Codeforces Problem |https://stackabuse.com/pytesseract-simple-python-optical-character-recognition/|
+| 3 |Personal website       |Get up and running a persnoal website |https://jekyllrb.com/|
+|4|Ping Pong|Make a multiplayer ping pong game|https://github.com/Nehal19/amfoss-task/tree/master/pingpong|
+|5|Project Euler|Using Algorithms to Solving Programs|https://github.com/Nehal19/amfoss-task/tree/master/projecteuler|
+|6|Rusted Email|Using Regex and Rust to find valid email|https://docs.rs/regex/1.3.1/regex/|
+|7|CLI app with Go|Using Golang and twitter's rest api|https://gobyexample.com/command-line-flags|
+|8|Web scrapping|Scrap Google search results with nokogiri|https://nokogiri.org/tutorials/parsing_an_html_xml_document.html  https://nokogiri.org/tutorials/searching_a_xml_html_document.html|
+|9|Get using javascript|Get detalis of User using Graphql|https://github.com/Nehal19/amfoss-task/blob/master/medium.com|
+|10|CS50|Finish CS50 till pset4|https://ide.cs50.io/Nehal19/ide|
+|11|Reverse me|deciphiring a pyhton code|https://data-flair.training/blogs/python-bitwise-operators/|
+|12|Bandit|Complete bandit till level 10|http://overthewire.org/wargames/bandit/bandit11.html|
+|13|Star all reposotries|run a script in chrome||
