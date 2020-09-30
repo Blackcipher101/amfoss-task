@@ -17,6 +17,7 @@ long readUltrasonicDistance(int triggerPin, int echoPin)
 void setup()
 {
   pinMode(12, OUTPUT);
+  pinMode(11, OUTPUT);
 }
 
 void loop()
@@ -24,8 +25,10 @@ void loop()
   x = 0.01723 * readUltrasonicDistance(5, 5);
   if (x < 100) {
     digitalWrite(12, LOW);
+    digitalWrite(11, HIGH);
   } else {
     digitalWrite(12, HIGH);
+    digitalWrite(11, LOW);
   }
   delay(10); // Delay a little bit to improve simulation performance
 }
